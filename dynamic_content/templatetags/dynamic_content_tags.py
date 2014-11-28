@@ -20,6 +20,9 @@ def get_content(identifier, default=None):
       ``DynamicContent`` object exists.
 
     '''
+    if default is None:
+        default = ''
+
     try:
         return models.DynamicContent.objects.get(identifier=identifier)
     except models.DynamicContent.DoesNotExist:
