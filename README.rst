@@ -3,8 +3,8 @@ Django Dynamic Content
 
 A reusable Django app that allows to place dynamic content into templates.
 
-Usually you would use a CMS like [django-cms](https://www.django-cms.org) for
-this szenario, which also has very useful static placeholders as of version 3,
+Usually you would use a CMS like `django-cms <https://www.django-cms.org>`_ for 
+this scenario, which also has very useful static placeholders as of version 3,
 but sometimes you have a small project that doesn't need a fully blown CMS. In
 this usecase a simple model with content that can be edited via the admin and
 which instances can be placed in templates would be nice to have.
@@ -26,8 +26,6 @@ To get the latest commit from GitHub
 
     pip install -e git+git://github.com/bitmazk/django-dynamic-content.git#egg=dynamic_content
 
-TODO: Describe further installation steps (edit / remove the examples below):
-
 Add ``dynamic_content`` to your ``INSTALLED_APPS``
 
 .. code-block:: python
@@ -35,15 +33,6 @@ Add ``dynamic_content`` to your ``INSTALLED_APPS``
     INSTALLED_APPS = (
         ...,
         'dynamic_content',
-    )
-
-Add the ``dynamic_content`` URLs to your ``urls.py``
-
-.. code-block:: python
-
-    urlpatterns = patterns('',
-        ...
-        url(r'^dynamic-content/', include('dynamic_content.urls')),
     )
 
 Before your tags/filters are available in your templates, load them by using
