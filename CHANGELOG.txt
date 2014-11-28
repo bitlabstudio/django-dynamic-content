@@ -1,5 +1,6 @@
 === 0.0.X (onggoing, to be released as 0.1) ===
 - Initial commit
+- Added DynamicContent model & migrations
 
 
 # Suggested file syntax:
