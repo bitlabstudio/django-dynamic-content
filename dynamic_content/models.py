@@ -15,6 +15,7 @@ class DynamicContent(TranslatableModel):
 
     """
     identifier = models.CharField(
+        unique=True,
         max_length=256,
         verbose_name=('Unique identifier'),
     )
@@ -22,6 +23,7 @@ class DynamicContent(TranslatableModel):
     translations = TranslatedFields(
         content=models.TextField(
             verbose_name=_('Content'),
+            null=True, blank=True,
         )
     )
 

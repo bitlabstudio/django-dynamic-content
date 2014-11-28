@@ -57,19 +57,23 @@ Just put this into your template:
 ..code-block:: html
 
     {% load dynamic_content_tags %}
-    {% render_content "FOOTER_INFO" as footer_content %}{{ footer_content }}
+    {% get_content "FOOTER_INFO" default="Foobar!" as footer %}{{ footer.content }}
 
 
 Templatetags
 ------------
 
-render_content
-++++++++++++++
+get_content
++++++++++++
 
-Usage: ``{% render content "<content_identifier" as <variable_name> %}``
+Usage: ``{% get_content "<content_identifier" [default="Default text"] as <variable_name> %}``
 
 This is an assignment tag that simply fetches the content from the database
 based on the given unique content identifier.
+
+If no object with the given identifier is found, a new one will be created.
+If you pass in a ``default`` text, the new object will be created with that
+text.
 
 
 Contribute

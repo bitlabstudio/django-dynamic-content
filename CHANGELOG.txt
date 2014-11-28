@@ -2,6 +2,7 @@
 - Initial commit
 - Added DynamicContent model & migrations
 - Added admin for DynamicContent model
+- Added `get_content` templatetag
 
 
 # Suggested file syntax:
