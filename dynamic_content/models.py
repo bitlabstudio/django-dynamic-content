@@ -2,7 +2,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from hvad.models import TranslatableModel, TranslatedFields
+from hvad.models import TranslatableModel, TranslatedFields, TranslationManager
 
 
 class DynamicContent(TranslatableModel):
@@ -24,3 +24,5 @@ class DynamicContent(TranslatableModel):
             verbose_name=_('Content'),
         )
     )
+
+    objects = TranslationManager()
