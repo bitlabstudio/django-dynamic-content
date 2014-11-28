@@ -1,12 +1,12 @@
 """Tests for the models of the dynamic_content app."""
 from django.test import TestCase
 
-# from . import factories
+from .. import models
 
 
-class DummyModelTestCase(TestCase):
-    """Tests for the ``DummyModel`` model."""
+class DynamicContentTestCase(TestCase):
+    """Tests for the ``DynamicContent`` model."""
     def test_model(self):
-        # obj = factories.DummyModelFactory()
-        # self.assertTrue(obj.pk)
-        self.assertTrue(True)
+        obj = models.DynamicContent.objects.create(
+            identifier='foobar', content='barfoo')
+        self.assertTrue(obj.pk)

@@ -1,7 +1,15 @@
 Django Dynamic Content
-============
+======================
 
 A reusable Django app that allows to place dynamic content into templates.
+
+Usually you would use a CMS like [django-cms](https://www.django-cms.org) for
+this szenario, which also has very useful static placeholders as of version 3,
+but sometimes you have a small project that doesn't need a fully blown CMS. In
+this usecase a simple model with content that can be edited via the admin and
+which instances can be placed in templates would be nice to have.
+
+As this app grows, we might add frontend editing ability in the future.
 
 Installation
 ------------
@@ -55,8 +63,24 @@ Don't forget to migrate your database
 Usage
 -----
 
-TODO: Describe usage or point to docs. Also describe available settings and
-templatetags.
+Just put this into your template:
+
+..code-block:: html
+
+    {% load dynamic_content_tags %}
+    {% render_content "FOOTER_INFO" as footer_content %}{{ footer_content }}
+
+
+Templatetags
+------------
+
+render_content
+++++++++++++++
+
+Usage: ``{% render content "<content_identifier" as <variable_name> %}``
+
+This is an assignment tag that simply fetches the content from the database
+based on the given unique content identifier.
 
 
 Contribute
