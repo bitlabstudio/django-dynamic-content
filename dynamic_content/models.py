@@ -2,6 +2,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from ckeditor.fields import RichTextField
 from hvad.models import TranslatableModel, TranslatedFields, TranslationManager
 
 
@@ -23,8 +24,12 @@ class DynamicContent(TranslatableModel):
     translations = TranslatedFields(
         content=models.TextField(
             verbose_name=_('Content'),
-            null=True, blank=True,
-        )
+            blank=True,
+        ),
+        content_html=RichTextField(
+            verbose_name=_('Content (html)'),
+            blank=True,
+        ),
     )
 
     objects = TranslationManager()

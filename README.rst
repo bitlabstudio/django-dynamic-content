@@ -3,7 +3,7 @@ Django Dynamic Content
 
 A reusable Django app that allows to place dynamic content into templates.
 
-Usually you would use a CMS like `django-cms <https://www.django-cms.org>`_ for 
+Usually you would use a CMS like `django-cms <https://www.django-cms.org>`_ for
 this scenario, which also has very useful static placeholders as of version 3,
 but sometimes you have a small project that doesn't need a fully blown CMS. In
 this usecase a simple model with content that can be edited via the admin and
@@ -33,7 +33,12 @@ Add ``dynamic_content`` to your ``INSTALLED_APPS``
     INSTALLED_APPS = (
         ...,
         'dynamic_content',
+		'hvad',
+		'ckeditor',
     )
+
+Please check out the ckeditor docs for installation and configuration:
+https://github.com/django-ckeditor/django-ckeditor
 
 Before your tags/filters are available in your templates, load them by using
 
@@ -54,10 +59,14 @@ Usage
 
 Just put this into your template:
 
-..code-block:: html
+.. code-block:: html
 
     {% load dynamic_content_tags %}
-    {% get_content "FOOTER_INFO" default="Foobar!" as footer %}{{ footer.content }}
+    {% get_content "FOOTER_INFO" default="Foobar!" as footer %}
+	{{ footer.content|linebreaks }}
+	{{ footer.content_html|safe }}
+
+Of course you are not forced to use both content fields (html and non-html).
 
 
 Templatetags

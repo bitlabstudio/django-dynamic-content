@@ -40,6 +40,7 @@ COVERAGE_MODULE_EXCLUDES = [
 ]
 
 EXTERNAL_APPS = [
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.auth',
@@ -50,6 +51,7 @@ EXTERNAL_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django_nose',
+    'hvad',
 ]
 
 INTERNAL_APPS = [
@@ -61,3 +63,18 @@ INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS
 COVERAGE_MODULE_EXCLUDES += EXTERNAL_APPS
 
 SECRET_KEY = 'foobar'
+
+# ckeditor settings
+CKEDITOR_UPLOAD_PATH = 'ckeditor_uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_JQUERY_URL = \
+    '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [{
+            'name': 'basic',
+            'items': ['Bold', 'Italic', 'Underline', 'RemoveFormat', '-',
+                      'PasteText', 'Undo', 'Redo', 'Format', 'Source', ],
+        }],
+    },
+}
