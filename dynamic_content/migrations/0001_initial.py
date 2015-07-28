@@ -31,6 +31,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'dynamic_content_dynamiccontent_translation',
             },
             bases=(models.Model,),
         ),
