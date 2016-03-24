@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                          'dynamic_content.tests.south_settings')
+                          'dynamic_content.tests.settings')
 
     from django.core.management import execute_from_command_line
 

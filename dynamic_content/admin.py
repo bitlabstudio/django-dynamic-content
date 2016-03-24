@@ -21,7 +21,7 @@ class DynamicContentAdmin(TranslatableAdmin):
     get_content_html.short_description = _('Content (html)')
 
     def get_queryset(self, request):
-        qs = super(DynamicContentAdmin, self).queryset(request)
+        qs = super(DynamicContentAdmin, self).get_queryset(request)
         qs = qs.prefetch_related('translations')
         return qs
 

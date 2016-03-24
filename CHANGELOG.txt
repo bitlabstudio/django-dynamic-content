@@ -1,5 +1,7 @@
 === 0.2.X (onggoing, to be released as 0.3) ===
 
+- Prepared app for Django>=1.8
+
 === 0.1.X (onggoing, to be released as 0.2) ===
 
 - Added html content field
