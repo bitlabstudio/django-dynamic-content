@@ -1,6 +1,6 @@
 coverage
-django-coverage
 ipdb
 flake8
-fabric
-mock
+fabric3
+paramiko<2.0.0
+tox

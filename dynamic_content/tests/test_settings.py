@@ -1,8 +1,8 @@
 """Settings that need to be set in order to run the tests."""
 import os
 
-DEBUG = True
 
+DEBUG = True
 SITE_ID = 1
 
 APP_ROOT = os.path.abspath(
@@ -43,10 +43,10 @@ TEMPLATES = [{
     'OPTIONS': {
         'context_processors': (
             'django.contrib.auth.context_processors.auth',
-            'django.core.context_processors.i18n',
-            'django.core.context_processors.request',
-            'django.core.context_processors.media',
-            'django.core.context_processors.static',
+            'django.template.context_processors.i18n',
+            'django.template.context_processors.request',
+            'django.template.context_processors.media',
+            'django.template.context_processors.static',
         )
     }
 }]
