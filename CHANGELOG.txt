@@ -1,6 +1,6 @@
 === 0.3.X (onggoing, to be released as 0.4) ===
 
-- Prepared app for Django 1.9 and Python 3.5
+- Prepared app for Django 1.11 and Python 3.5
 
 === 0.2.X (onggoing, to be released as 0.3) ===
 
