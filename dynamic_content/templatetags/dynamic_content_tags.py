@@ -7,7 +7,7 @@ from .. import models
 register = template.Library()
 
 
-@register.assignment_tag
+@register.simple_tag
 def get_content(identifier, default=None):
     '''
     Returns the DynamicContent instance for the given identifier.
