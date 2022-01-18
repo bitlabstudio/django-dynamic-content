@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('content', models.TextField(verbose_name='Content')),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
-                ('master', models.ForeignKey(related_name='translations', editable=False, to='dynamic_content.DynamicContent', null=True, on_delete=django.db.models.deletion.CASCADE)),
+                ('master', models.ForeignKey(related_name='translations', editable=False, to='dynamic_content.DynamicContent', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'abstract': False,
