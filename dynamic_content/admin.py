@@ -9,7 +9,7 @@ from . import models
 
 class DynamicContentAdmin(TranslatableAdmin):
     list_display = ['identifier', 'get_content', 'get_content_html',
-                    'all_translations']
+                    'all_languages_column']
     search_fields = ['identifier', 'translations__content', ]
 
     def get_content(self, obj):
