@@ -3,7 +3,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from ckeditor.fields import RichTextField
-from hvad.models import TranslatableModel, TranslatedFields, TranslationManager
+from parler.managers import TranslatableManager
+from parler.models import TranslatableModel, TranslatedFields
 
 
 class DynamicContent(TranslatableModel):
@@ -32,4 +33,4 @@ class DynamicContent(TranslatableModel):
         ),
     )
 
-    objects = TranslationManager()
+    objects = TranslatableManager()

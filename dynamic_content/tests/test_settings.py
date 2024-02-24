@@ -62,7 +62,7 @@ EXTERNAL_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.sites',
-    'hvad',
+    'parler',
 ]
 
 INTERNAL_APPS = [
@@ -87,4 +87,15 @@ CKEDITOR_CONFIGS = {
                       'PasteText', 'Undo', 'Redo', 'Format', 'Source', ],
         }],
     },
+}
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'de'},
+    ),
+    'default': {
+        'fallback': 'en',             # defaults to PARLER_DEFAULT_LANGUAGE_CODE
+        'hide_untranslated': False,   # the default; let .active_translations() return fallbacks too.
+    }
 }

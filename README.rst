@@ -33,7 +33,7 @@ Add ``dynamic_content`` to your ``INSTALLED_APPS``
     INSTALLED_APPS = (
         ...,
         'dynamic_content',
-		'hvad',
+		'parler',
 		'ckeditor',
     )
 

@@ -34,7 +34,7 @@ import dynamic_content as app
 
 install_requires = [
     'django',
-    'django-hvad',
+    'django-parler',
     'django-ckeditor',
 ]
 

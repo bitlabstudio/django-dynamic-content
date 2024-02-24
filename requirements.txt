@@ -1,4 +1,4 @@
 django
-django-hvad
+django-parler
 django-ckeditor
 Pillow
